@@ -1,0 +1,27 @@
+{
+  "name": "redis-connect",
+  "version": "0.1.0",
+  "author": "BahaaGalal <bahaa.g.ali@gmail.com>",
+  "description": "redis connect utility, connects to redis server, selects a database and fire callbacks",
+  "main": "./lib/redis.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bahaagalal/redis-connect.git"
+  },
+  "keywords": [
+    "redis"
+  ],
+  "engine": {
+    "node": ">=0.10"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test/*.js"
+  },
+  "devDependencies": {
+    "mocha": "~2.0.1",
+    "chai": "~1.9.2"
+  },
+  "dependencies": {
+    "redis": "~0.12.1"
+  }
+}
