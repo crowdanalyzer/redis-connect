@@ -1,6 +1,6 @@
 {
   "name": "redis-connect",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "BahaaGalal <bahaa.g.ali@gmail.com>",
   "description": "redis connect utility, connects to redis server, selects a database and fire callbacks",
   "main": "./lib/redis.js",
