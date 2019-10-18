@@ -56,7 +56,7 @@ describe('redis', function(){
 
 		it('should return an error if port configuration doesn\'t exist', function(done){
 			redis.connect({
-				host: '127.0.0.1',
+				host: 'redis',
 				port: null
 			}, function(err, client){
 				expect(err).to.not.be.null;
@@ -68,7 +68,7 @@ describe('redis', function(){
 
 		it('should return an error if port configuration isn\'t number', function(done){
 			redis.connect({
-				host: '127.0.0.1',
+				host: 'redis',
 				port: '1234'
 			}, function(err, client){
 				expect(err).to.not.be.null;
@@ -80,7 +80,7 @@ describe('redis', function(){
 
 		it('should return an error if port configuration is less than or equal 0', function(done){
 			redis.connect({
-				host: '127.0.0.1',
+				host: 'redis',
 				port: 0
 			}, function(err, client){
 				expect(err).to.not.be.null;
@@ -92,7 +92,7 @@ describe('redis', function(){
 
 		it('should return an error if db configuration doesn\'t exist', function(done){
 			redis.connect({
-				host: '127.0.0.1',
+				host: 'redis',
 				port: 6379,
 				db: null
 			}, function(err, client){
@@ -105,7 +105,7 @@ describe('redis', function(){
 
 		it('should return an error if db configuration isn\'t number', function(done){
 			redis.connect({
-				host: '127.0.0.1',
+				host: 'redis',
 				port: 6379,
 				db: '0'
 			}, function(err, client){
@@ -118,7 +118,7 @@ describe('redis', function(){
 
 		it('should return an error if db configuration is less than 0', function(done){
 			redis.connect({
-				host: '127.0.0.1',
+				host: 'redis',
 				port: 6379,
 				db: -1
 			}, function(err, client){
@@ -131,7 +131,7 @@ describe('redis', function(){
 
 		it('should return a redis client object if database config is correct', function(done){
 			redis.connect({
-				host: '127.0.0.1',
+				host: 'redis',
 				port: 6379,
 				db: 0
 			}, function(err, client){

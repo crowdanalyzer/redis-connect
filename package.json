@@ -1,6 +1,6 @@
 {
-  "name": "redis-connect",
-  "version": "0.2.0",
+  "name": "@crowdanalyzer/redis-connect",
+  "version": "1.0.0",
   "author": "BahaaGalal <bahaa.g.ali@gmail.com>",
   "description": "redis connect utility, connects to redis server, selects a database and fire callbacks",
   "main": "./lib/redis.js",
@@ -12,17 +12,24 @@
     "redis"
   ],
   "engine": {
-    "node": ">=0.10"
+    "node": ">=10.0.0"
   },
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha test/*.js"
+    "test": "mocha test/*.js",
+    "lint": "eslint ./lib/ ./test/",
+    "docker": "docker-compose up -d --build && docker exec -it ${PWD##*/} bash"
   },
   "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-crowdanalyzer": "^1.4.1",
+    "chai": "~1.9.2",
+    "hiredis": "~0.5.0",
     "mocha": "~2.0.1",
-    "chai": "~1.9.2"
+    "redis": "^2.8.0"
   },
-  "dependencies": {
-    "redis": "~0.12.1",
-    "hiredis": "~0.5.0"
+  "dependencies": {},
+  "peerDependencies": {
+    "hiredis": "~0.5.0",
+    "redis": "^2.8.0"
   }
 }
